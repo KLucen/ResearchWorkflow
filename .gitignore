@@ -1,0 +1,36 @@
+# ---- 操作系统垃圾 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ---- 运行时产物（工具的临时输出）----
+*.tmp
+.cache/
+rvzotero-out/
+
+# ---- Obsidian：只忽略每台机器各自的工作区状态 ----
+# 注意：template/.obsidian/community-plugins.json 是要发布的（声明所需插件），
+# 所以这里只忽略 workspace 状态文件，不能用 `.obsidian/` 一刀切。
+# 前导 `**/` 是必需的：不含斜杠以外锚点的模式会在任意层级匹配，
+# 但含中间斜杠的模式（如 `.obsidian/workspace.json`）只匹配仓库根级，
+# 而这里真正的 Vault 在 template/ 下，故必须写成 `**/.obsidian/...`。
+**/.obsidian/workspace
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/cache
+**/.trash/
+
+# ---- 本仓库的构建脚手架（不属于发布内容）----
+_rvshare_build/
